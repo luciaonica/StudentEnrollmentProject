@@ -1,0 +1,38 @@
+<div class="update-course">
+    <h1>Update course</h1>
+    <p class="message-p">{{courseMessage}}</p>
+    <form #addCourse="ngForm" 
+        class="common-form"
+        (ngSubmit)="submit(addCourse.value)">
+        <input 
+            type="text" 
+            class="form-input"
+            placeholder="Enter Course Name"
+            name="name"
+            ngModel="{{courseData?.name}}"
+        />
+        <input 
+            type="text" 
+            class="form-input"
+            placeholder="Enter Description"
+            name="description"
+            ngModel="{{courseData?.description}}"
+        />
+        <input 
+            type="number" 
+            class="form-input"
+            placeholder="Enter maxNumberOfStudents"
+            name="maxNumberOfStudents"
+            ngModel="{{courseData?.maxNumberOfStudents}}"
+        />
+        <input 
+            type="text" 
+            class="form-input"
+            placeholder="Enter teacher Name"
+            name="teacher"
+            ngModel="{{courseData?.teacher}}"
+        />
+        <button class="form-button">Save</button>
+    </form>
+
+</div>

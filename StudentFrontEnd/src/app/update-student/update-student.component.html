@@ -1,0 +1,33 @@
+<div class="update-student">
+    <h1>Update Student</h1>
+    <p class="message-p">{{studentMessage}}</p>
+    <form #updateStudent="ngForm" 
+        class="common-form"
+        (ngSubmit)="submit(updateStudent.value)">
+        <input 
+            type="text" 
+            class="form-input"
+            placeholder="Enter Student First Name"
+            name="userFirstName"
+            ngModel="{{studentData?.userFirstName}}"
+        />
+        <input 
+            type="text" 
+            class="form-input"
+            placeholder="Enter Student Last Name"
+            name="userLastName"
+            ngModel="{{studentData?.userLastName}}"
+        />
+        <input 
+            type="email" 
+            class="form-input"
+            placeholder="Enter email"
+            name="email"
+            ngModel="{{studentData?.email}}"
+        />
+        
+        <button class="form-button">Save</button>
+    </form>
+
+</div>
+

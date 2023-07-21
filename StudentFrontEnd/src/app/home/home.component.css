@@ -1,0 +1,24 @@
+.welcome {
+    display: flex;
+    flex-direction: row;
+}
+
+.img{
+    width: 89%;
+    
+}
+
+.greeting {
+    width: 30%;
+}
+
+h1 {
+    
+    text-align: center;
+    font-family: sans-serif;
+    color: rgb(46, 56, 56);
+}
+
+h2, h4 {
+    text-align: center;
+}

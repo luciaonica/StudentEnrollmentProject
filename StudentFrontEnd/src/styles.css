@@ -1,0 +1,40 @@
+/* You can add global styles to this file, and also import other style files */
+body {
+    font-family: sans-serif;
+    background-color: rgb(226, 226, 222);
+}
+
+.container {
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.add-course {
+    text-align: center;
+}
+
+.common-form {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    margin: auto;
+}
+
+.form-input {
+    height: 35px;
+    margin-bottom: 20px;
+    border: 1px solid rgb(142, 167, 173);
+    padding-left: 15px;
+    color: rgb(142, 167, 173);
+}
+
+.form-button {
+    height: 35px;
+    border: 1px solid rgb(142, 167, 173);
+    color: rgb(142, 167, 173);
+    cursor: pointer;
+}
+
+.message-p {
+    color: green;
+}

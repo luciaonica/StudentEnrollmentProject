@@ -1,0 +1,26 @@
+<div >
+    <div class="navigation-bar">
+    <nav>
+      
+      <div *ngIf="isAdmin()" class="nav-btn">
+        <a routerLink="/admin-add-course" routerLinkActive=" active">Add Course</a>
+      </div>
+      <div class="nav-btn">
+        <a routerLink="/admin-courses" routerLinkActive=" active">Courses</a>
+      </div>
+      <div *ngIf="isAdmin()" class="nav-btn">
+        <a routerLink="/admin-students" routerLinkActive=" active">Students</a>
+      </div>
+      <div class="right-side">
+      <div *ngIf="!isLoggedIn()" class="nav-btn">
+        <a routerLink="/login" routerLinkActive=" active">Login</a>
+      </div>
+      <div class="nav-btn">
+        <a *ngIf="!isLoggedIn()" routerLink="/register" routerLinkActive=" active">Register</a>
+        <a *ngIf="isLoggedIn()" (click)="logout()">Logout</a>
+      </div>
+    </div>
+    </nav>
+  </div>
+
+</div>  

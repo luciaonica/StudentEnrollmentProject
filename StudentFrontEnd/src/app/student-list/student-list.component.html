@@ -1,0 +1,33 @@
+<div class="student-list">
+    <h1>Student List</h1>
+    <p class="message-p">{{studentMessage}}</p>
+    <table>
+        <thead>
+            <tr>
+                <th>Student ID</th>
+                <th>First Name</th>
+                <th>Last Name</th>                
+                <th>email</th>
+                <th>Action</th>
+            </tr> 
+        </thead>
+        <tbody>
+            <tr *ngFor="let student of studentList">
+                <td>{{student.userId}}</td>
+                <td>{{student.userFirstName}}</td>
+                <td>{{student.userLastName}}</td>
+                <td>{{student.email}}</td>
+                
+                <td>
+                    <fa-icon (click)="deleteStudent(student.userId)" [icon]="iconDelete" class="icon-delete"></fa-icon>
+                    <a routerLink="/admin-update-student/{{student.userId}}"><fa-icon  [icon]="iconEdit" class="icon-edit"></fa-icon></a>
+                   
+                     
+                    
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+</div>
+

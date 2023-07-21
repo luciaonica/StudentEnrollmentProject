@@ -1,0 +1,33 @@
+<div class="course-list">
+    <h1>Course List</h1>
+    <p class="message-p">{{courseMessage}}</p>
+    <table>
+        <thead>
+            <tr>
+                <th>Course ID</th>
+                <th>Name</th>
+                <th>Description</th>                
+                <th>maxNumberOfStudents</th>
+                <th>Teacher Name</th>
+                <th *ngIf="userId">Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let course of courseList">
+                <td>{{course.courseId}}</td>
+                <td>{{course.name}}</td>
+                <td>{{course.description}}</td>
+                <td>{{course.maxNumberOfStudents}}</td>
+                <td>{{course.teacher}}</td>
+                <td *ngIf="userId">
+                    <fa-icon *ngIf="isAdmin()" (click)="deleteCourse(course.courseId)" [icon]="iconDelete" class="icon-delete"></fa-icon>
+                    
+                    <a *ngIf="isAdmin()" class="icon-edit" routerLink="/admin-update-course/{{course.courseId}}"><fa-icon  [icon]="iconEdit"></fa-icon></a>
+                    <button *ngIf="!isAdmin()" (click)="enrollCourse(course.courseId)" >Enroll</button>
+                    
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+</div>

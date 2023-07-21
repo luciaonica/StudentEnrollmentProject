@@ -1,0 +1,12 @@
+<div class="Title-and-Basic-Information">
+    <div class="welcome">
+      <div class="greeting">
+        <h1>Welcome <span *ngIf="!isLoggedIn()">to our page. <br>Enroll Today in our free Courses!</span></h1>
+        <h2><span *ngIf="isLoggedIn()">{{userFullname}}</span></h2>
+        <h4><span *ngIf="isLoggedIn()">[{{userRole}}]</span></h4>
+      </div>
+      <div class="img">
+        <img class="center" src="assets/home.png" alt="mountain-img" width="100%" height="115%">
+      </div>
+    </div>
+  </div>
